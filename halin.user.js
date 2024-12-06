@@ -1,11 +1,13 @@
 // ==UserScript==
-// @name         [翰林] 行動大師3 + 輔助教材網
-// @version      2024-12-06
+// @name         [翰林] 行動大師3 + 輔材網
+// @version      0.1
 // @description  免登入開啟電子書
 // @author       Vincender
 // @match        edisc3.hle.com.tw/edisc_v3/*
 // @match        reference.hle.com.tw/*
 // @match        reference.hle.com.tw/*bookId*
+// @updateURL    https://vincender.github.io/tpmScripts/update.json
+// @downloadURL  https://vincender.github.io/tpmScripts/halin.user.js
 // @grant        unsafeWindow
 // ==/UserScript==
 (function() {
