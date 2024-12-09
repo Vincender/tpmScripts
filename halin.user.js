@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         [翰林] 行動大師3 + 輔材網  [康軒] 數位高手
+// @name         [翰林] 行動大師3 + 輔材網　[康軒] 數位高手 by Vochant
 // @version      0.4
 // @description  免登入開啟電子書
 // @author       Vincender
