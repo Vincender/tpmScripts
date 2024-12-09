@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         [翰林] 行動大師3 + 輔材網  [康軒] 數位高手 
+// @name         [翰林] 行動大師3 + 輔材網  [康軒] 數位高手
 // @version      0.4
 // @description  免登入開啟電子書
 // @author       Vincender
@@ -14,7 +14,7 @@
 // @grant        unsafeWindow
 // ==/UserScript==
 (function() {
-    'use strict';    
+    'use strict';
     const observerTitle = new MutationObserver(function(mutationsList) { mutationsList.forEach(function(mutation) { if (document.title.includes("翰林電子書")) { const cookies = document.cookie; const getCookie = (name) => { const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)')); return match ? decodeURIComponent(match[2]) : null; }; if (getCookie('data') != null) { document.title = getCookie('data'); document.cookie = "data=; domain=hle.com.tw; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT;"; } } }); }); observerTitle.observe(document, { subtree: true, childList: true });
     if(location.hostname === decodeURIComponent(escape(atob('ZWRpc2MzLmhsZS5jb20udHc=')))) {
         const g = o => decodeURIComponent(escape(atob(o))), userData = { 'bGFzdF9zaWduaW5YX3YyMDIz': btoa(unescape(encodeURIComponent(new Date().getTime().toString()))), 'ZW1haWxYX3YyMDIz': 'dGVzdEB0ZXN0LmNvbQ==', 'dG9rZW5YX3YyMDIz': 'ZXlKaGJHY2lPaUpTVXpJMU5pSXNJbXRwWkNJNklqZzFOemd3TldZeFpHUTNabUU1WVRaaU5USTNaalEwWldObVptSmtORGhqSWl3aWRIbHdJam9pWVhRcmFuZDBJbjAuZXlKdVltWWlPakUzTXpJNE5EZzJNRElzSW1WNGNDSTZNVGMyTkRrNE9UUXdNaXdpYVhOeklqb2lhSFIwY0hNNkx5OXBaQzVvYkdVdVkyOXRMblIzSWl3aVlYVmtJanBiSW1Gd2FURWlMQ0pKWkdWdWRHbDBlVk5sY25abGNrRndhU0lzSW1oaGJteHBiaTFoY0draVhTd2lZMnhwWlc1MFgybGtJam9pYW5NaUxDSnpkV0lpT2lKbE56UTNNak13TlMweFlXUXlMVFJqTURZdFlqRXhPQzFtWlRka09EazNNek5tWWpBaUxDSmhkWFJvWDNScGJXVWlPakUzTXpJNE5EZzJNREVzSW1sa2NDSTZJbXh2WTJGc0lpd2lhSFIwY0RvdkwzTmphR1Z0WVhNdWVHMXNjMjloY0M1dmNtY3ZkM012TWpBd05TOHdOUzlwWkdWdWRHbDBlUzlqYkdGcGJYTXZaVzFoYVd4aFpHUnlaWE56SWpvaWNtRnRZWGN4T1RNME1FQjNhV3RtWldVdVkyOXRJaXdpUVhOd1RtVjBMa2xrWlc1MGFYUjVMbE5sWTNWeWFYUjVVM1JoYlhBaU9pSkRSMFEzTkVsYVFVcE9NalJITlZSVlMwOVpVMW8zU2pOT1JVTlNVak5KTXlJc0luSnZiR1VpT2lMb2dJSGx1S3NpTENKbGJXRnBiQ0k2SW5KaGJXRjNNVGt6TkRCQWQybHJabVZsTG1OdmJTSXNJbVpoYldsc2VWOXVZVzFsSWpwYkl1V0ZyT2VVcU9PRWxpSXNJdVdGck9lVXFDSmRMQ0puYVhabGJsOXVZVzFsSWpvaTViaXo2Sm1mSWl3aWJtRnRaU0k2V3lMbGhhem5sS2pqaEpibHVMUG9tWjhpTENMbGhhem5sS2psdUxQb21aOGlYU3dpWlcxaGFXeGZkbVZ5YVdacFpXUWlPblJ5ZFdVc0luQm9iMjVsWDI1MWJXSmxjaUk2SWpBNU16TXpNVEl3TkRraUxDSndhRzl1WlY5dWRXMWlaWEpmZG1WeWFXWnBaV1FpT25SeWRXVXNJbkJ5WldabGNuSmxaRjkxYzJWeWJtRnRaU0k2SXVXRnJPZVVxT09FbHVXNHMtaVpueUlzSW5WelpYSmZaRzl0WVdsdUlqb2laV1IxSWl3aWMyTm9iMjlzVTNsemRHVnRJam9pNVp5TDVMaXRJaXdpYVhOcFpHVnVkR2xtYVdWa0lqcDBjblZsTENKc2IyTnJJanBtWVd4elpTd2lkbVZ5SWpvekxDSnpZMjl3WlNJNld5SnZjR1Z1YVdRaUxDSndjbTltYVd4bElpd2lZWEJwTVNJc0lrbGtaVzUwYVhSNVUyVnlkbVZ5UVhCcElpd2lhR0Z1YkdsdUxXRndhU0lzSW05bVpteHBibVZmWVdOalpYTnpJbDBzSW1GdGNpSTZXeUp3ZDJRaVhYMC5QOThXMXVIUVIzRjVFMU5hVFRCZWVhQkY2WEE4OUdUc0xaVnpaekZNU2RqYXVNZGw0VzJKclpjZXVZZW5meUpBTXVEbWJMdzFaZmI2NTB3QmlwMnQ0RWNKY0RLdEcyUVdaQ3NaVjBNcVVsMUdxaE1WNHRDVXQ1MjU5Y01wemlPRC10ZWNIaEtqQ1ctZUZmaHNzaUdUa1hjaTJDYkY5UzNLNFhaVC1jcF9lMzBnYWdFMDBTRlJhMGNReEE2ejZkVmxBSzRLM3VBakdUVWFQemlWR0RMV3E3Z2hPWkZBYzR0OTFBQ0ZIeWU5U0V6cUNTelU4N0ZHZENfTzVMUjFpMlJHc2NVOHZSN1k0QnJ4RnFVR0tlQjFUY2szYndXcklfWEhVU21qRFF2dlJRb1VfM3dpelZtdlcwRG5xeTEtVlk0aGFrNWpyei1DTElycEZOdk82Zml2eGc=', 'cm9sZVhfdjIwMjM=': '6ICB5bir', 'bG9ja1hfdjIwMjM=': 'ZmFsc2U=', 'cHJvZmlsZVhfdjIwMjM=': '5YWN55m76IWz5pys' }, observer = new MutationObserver((mutationsList, observer) => { for (const mutation of mutationsList) { if (mutation.type === 'childList') { mutation.addedNodes.forEach(node => { if (node.nodeType === 1 && node.classList.contains(g('c3dhbDItY29udGFpbmVy')) && node.classList.contains(g('c3dhbDItY29udGFpbmVy')) && node.classList.contains('swal2-backdrop-show')) { node.style.visibility = "hidden"; document.documentElement.style.overflow = 'auto'; document.body.style.overflow = 'auto'; } }); } } }); observer.observe(document.body, { childList: true, subtree: true });
@@ -26,11 +26,10 @@
         async function c(a) { document.cookie = "data=" + encodeURIComponent(document.querySelector("body > section > main > article.content > book-detail-display").shadowRoot.querySelector("#book-name").innerText) + "; domain=hle.com.tw; path=/;"; sessionStorage.setItem(g('bG9jaw=='), g(userData['bG9jaw=='])); }
         unsafeWindow.checkLock = c;
     } else if (location.hostname.includes("knsh")) {
-        digitalmaster();
+        KNSHUtilityLite();
     }
 })();
 
-/*
 // 參考來源：https://gist.github.com/aliyaliu368/891eef75e09494e965d291ead4a80d17?permalink_comment_id=5217645#gistcomment-5217645
 // ==UserScript==
 // @name         康軒數位高手 KNSHUtility Lite
@@ -44,7 +43,6 @@
 // @license      MIT
 // @grant        unsafeWindow
 // ==/UserScript==
-*/
 function KNSHUtilityLite() {
         console.log(unsafeWindow);
     // 頁面類型判定
